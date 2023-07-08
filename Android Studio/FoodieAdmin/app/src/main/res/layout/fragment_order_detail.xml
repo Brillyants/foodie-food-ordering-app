@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
+    android:orientation="vertical"
+    tools:context=".Fragment.OrderDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="80dp">
+
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Order Detail"
+            android:textAlignment="center"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/txt_ordercode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="X0X0X0"
+            android:textColor="@color/orange"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/txt_custname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Name :"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_custphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Phone Number :"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_custlocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Location : :"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_dateorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Date Order :"
+            android:textSize="18sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewAllOrder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/txt_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Total : "
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/img_transfer"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_gravity="center"
+            android:src="@drawable/bukti"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin = "15dp">
+
+            <Button
+                android:id="@+id/btn_decline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Decline"
+                android:backgroundTint="#FF0000"
+                android:layout_marginRight="15dp"/>
+
+            <Button
+                android:id="@+id/btn_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Accept"
+                android:backgroundTint="#02CF02"
+                android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
